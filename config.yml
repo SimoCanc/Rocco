@@ -1,0 +1,28 @@
+# Configuration for Rasa NLU.
+# https://rasa.com/docs/rasa/nlu/components/
+language: "en"
+
+# Alternative pipeline (custom)
+pipeline:
+- name: WhitespaceTokenizer
+- name: CountVectorsFeaturizer
+- name: CountVectorsFeaturizer
+  analyzer: "char_wb"
+  min_ngram: 1
+  max_ngram: 3
+- name: DIETClassifier
+  epochs: 50
+  model_confidence: linear_norm
+  constrain_similarities: True
+- name: FallbackClassifier
+  threshold: 0.7
+
+# Configuration for Rasa Core.
+policies:
+- name: MemoizationPolicy
+- name: TEDPolicy
+  max_history: 6
+  epochs: 50
+  constrain_similarities: True
+  model_confidence: linear_norm
+- name: RulePolicy

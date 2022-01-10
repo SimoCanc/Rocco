@@ -1,0 +1,110 @@
+version: "2.0"
+
+intents:
+  - greet_ENG
+  - greet_ITA
+  - affirm_ENG
+  - affirm_ITA
+  - deny_ENG
+  - deny_ITA
+  - bot_challenge_ENG
+  - bot_challenge_ITA
+  - call_plumber_ENG
+  - call_plumber_ITA
+  - call_electrician_ENG
+  - call_electrician_ITA
+  - call_painter_ENG
+  - call_painter_ITA
+
+#TODO: Siamo sicuri che servono così tante slots???
+slots:
+  slot_plumber:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: custom
+      value: action_call_plumber  
+
+  slot_electrician:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: custom
+      value: action_call_electrician   
+
+  slot_painter:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: custom
+      value: action_call_painter
+
+responses:
+  utter_rephrase_:
+  - text: "\u1f1e\u1f1e Could you please rephrase? \u1f1e\u1f1e Puoi gentilmente riformulare la richiesta?"
+  
+  utter_iamabot_ENG:
+  - text: "I am a bot, my name is Rocco"
+  utter_iamabot_ITA:
+  - text: "Sono un chatbot, mi chiamo Rocco"
+    
+  utter_greet_ENG:
+  - text: "Hi I am Rocco, how can I help you?"
+  - text: "Hi I am Rocco, tell me what you need"
+  utter_greet_ITA:
+  - text: "Ciao sono Rocco, come posso aiutarti?"
+  - text: "Ciao sono Rocco, di cosa hai bisogno?"
+
+  utter_goodbye_ENG:
+  - text: "Request sent. Goodbye!!"
+  utter_goodbye_ITA:
+  - text: "Richiesta inviata. Arrivederci!!"  
+  
+  utter_confirm_plumber_ENG:
+  - text: "Can I proceed to contact a plumber?"
+    buttons:
+    - title: Yes
+      payload: /affirm_ENG
+    - title: No
+       payload: /deny_ENG    
+  utter_confirm_plumber_ITA:
+  - text: "Procedo a contattare un idraulico?"
+    buttons:
+    - title: Si
+    payload: /affirm_ITA
+    - title: No
+    payload: /deny_ITA
+    
+  utter_confirm_electrician_ENG:
+  - text: "Can I proceed to contact an electrician?"
+    buttons:
+    - title: Yes
+      payload: /affirm_ENG
+    - title: No
+       payload: /deny_ENG    
+  utter_confirm_plumber_ITA:
+  - text: "Procedo a contattare un elettricista?"
+    buttons:
+    - title: Si
+    payload: /affirm_ITA
+    - title: No
+    payload: /deny_ITA
+    
+   utter_confirm_painter_ENG:
+  - text: "Can I proceed to contact a painter?"
+    buttons:
+    - title: Si
+      payload: /affirm_ENG
+    - title: No
+       payload: /deny_ENG    
+  utter_confirm_plumber_ITA:
+  - text: "Procedo a contattare un imbianchino?"
+    buttons:
+    - title: Si
+    payload: /affirm_ITA
+    - title: No
+    payload: /deny_ITA
+
+session_config:
+  session_expiration_time: 90
+  carry_over_slots_to_new_session: true

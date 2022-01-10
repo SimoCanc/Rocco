@@ -1,0 +1,111 @@
+version: "2.0"
+
+stories:
+#TODO: fare versioni con richieste Bad, e con chitchat
+- story: call plumber ENG
+  steps:
+  - intent: greet_ENG
+  - action: utter_greet_ENG
+  - intent: call_plumber_ENG
+  - action: utter_confirm_plumber_ENG
+  - action: action_call_plumber
+  - intent: affirm_ENG
+  - action: utter_goodbye_ENG
+
+- story: call plumber ITA
+  steps:
+  - intent: greet_ITA
+  - action: utter_greet_ITA
+  - intent: call_plumber_ITA
+  - action: utter_confirm_plumber_ITA
+  - action: action_call_plumber 
+  - intent: affirm_ITA
+  - action: utter_goodbye_ITA
+
+- story: call plumber short ENG
+  steps:
+  - intent: call_plumber_ENG
+  - action: utter_confirm_plumber_ENG
+  - action: action_call_plumber
+  - intent: affirm_ENG
+  - action: utter_goodbye_ENG
+
+- story: call plumber short ITA
+  steps:
+  - intent: call_plumber_ITA
+  - action: utter_confirm_plumber_ITA
+  - action: action_call_plumber 
+  - intent: affirm_ITA
+  - action: utter_goodbye_ITA
+
+- story: call electrician ENG
+  steps:
+  - intent: greet_ENG
+  - action: utter_greet_ENG
+  - intent: call_electrician_ENG
+  - action: utter_confirm_electrician_ENG
+  - action: action_call_electrician
+  - intent: affirm_ENG
+  - action: utter_goodbye_ENG
+  
+- story: call electrician ITA
+  steps:
+  - intent: greet_ITA
+  - action: utter_greet_ITA
+  - intent: call_electrician_ITA
+  - action: utter_confirm_electrician_ITA
+  - action: action_call_electrician
+  - intent: affirm_ITA
+  - action: utter_goodbye_ITA
+
+- story: call electrician short ENG
+  steps:
+  - intent: call_electrician_ENG
+  - action: utter_confirm_electrician_ENG
+  - action: action_call_electrician
+  - intent: affirm_ENG
+  - action: utter_goodbye_ENG
+
+- story: call electrician short ITA
+  steps:
+  - intent: call_electrician_ITA
+  - action: utter_confirm_electrician_ITA
+  - action: action_call_electrician
+  - intent: affirm_ITA
+  - action: utter_goodbye_ITA
+
+- story: call painter ENG
+  steps:
+  - intent: greet_ENG
+  - action: utter_greet_ENG
+  - intent: call_painter_ENG
+  - action: utter_confirm_painter_ENG
+  - action: action_call_painter
+  - intent: affirm_ENG
+  - action: utter_goodbye_ENG
+   
+- story: call painter ITA
+  steps:
+  - intent: greet_ITA
+  - action: utter_greet_ITA
+  - intent: call_painter_ITA
+  - action: utter_confirm_painter_ITA
+  - action: action_call_painter
+  - intent: affirm_ITA
+  - action: utter_goodbye_ITA
+
+- story: call painter short ENG
+  steps:
+  - intent: call_painter_ENG
+  - action: utter_confirm_painter_ENG
+  - action: action_call_painter
+  - intent: affirm_ENG
+  - action: utter_goodbye_ENG
+   
+- story: call painter short ITA
+  steps:
+  - intent: call_painter_ITA
+  - action: utter_confirm_painter_ITA
+  - action: action_call_painter
+  - intent: affirm_ITA
+  - action: utter_goodbye_ITA

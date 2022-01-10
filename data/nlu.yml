@@ -1,0 +1,161 @@
+version: "2.0"
+
+nlu:
+- intent: greet_ENG
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: greet_ITA
+  examples: |
+    - ciao
+    - salve
+    - buongiorno
+    - buonasera
+    - buon pomeriggio
+
+- intent: affirm_ENG
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: affirm_ITA
+  examples: |
+    - si
+    - certo
+    - certamente
+    - esatto
+    - affermativo
+    - va bene
+
+- intent: deny_ENG
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: deny_ITA
+  examples: |
+    - no
+    - sbagliato
+    - errato
+    - negativo
+    - non va bene
+
+- intent: bot_challenge_ENG
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - what is your name?
+    - what's your name?
+    - Who are you?
+    - who're you?
+
+- intent: bot_challenge_ITA
+  examples: |
+    - sei un bot?
+    - sei un chatbot?
+    - sei un chat bot?
+    - chi sei?
+    - cosa sei?
+    - sei un automatismo? 
+    - con chi stò parlndo?
+    - con chi parlo?
+    - quale è il tuo nome?
+
+- intent: call_plumber_ENG
+  examples: |
+    - My house is flooded
+    - I have a leaking pipe
+    - My sink is clogged
+    - My shower is clogged
+    - I've a clogged bathtub
+    - I have water everywhere
+    - The toilet does not flush
+    - The sink does not drain
+    - the bathtub is leaking
+    - Call a plumber
+    - I need a plumber
+
+- intent: call_plumber_ITA
+  examples: |
+    - Ho la casa allagata
+    - Ho un tubo che perde
+    - Ho il lavandino intasato
+    - Ho la vasca da bagno intasata
+    - Ho la doccia intasata
+    - Ho acqua da pertutto
+    - Lo sciacquone non scarica
+    - Il lavandino non scarica
+    - la vasca da bagno perde
+    - Chiama un idraulico
+    - Ho bisogno di un idraulico
+    - Necesito di un idraulico
+
+- intent: call_electrician_ENG
+  examples: |
+    - I'm in the dark
+    - We're in the dark
+    - the light went out
+    - a short circuit happened
+    - a short circuit has occurred
+    - A light bulb went out
+    - There is no current
+    - Call an electrician
+    - I need an electrician
+
+- intent: call_electrician_ITA
+  examples: |
+    - Sono al buio
+    - Siamo al buio
+    - è saltata la luce
+    - è successo un cortocircuito
+    - si è verificato un cortocircuito
+    - Si è fulminata una lampadina
+    - Non c'è corrente 
+    - Chiama un elettricista
+    - Ho bisogno di un elettricista
+    - Necesito di un elettricista
+
+- intent: call_painter_ENG
+  examples: |
+    - I need a house painter
+    - I need to paint the house
+    - I have to paint
+    - I need to paint a room
+    - I need to paint some rooms
+    - I have to putty a wall
+
+- intent: call_painter_ITA
+  examples: |
+    - Chiama un imbianchino
+    - Necessito di un imbianchino
+    - Ho bisogno di un imbianchino
+    - Devo imbiancare casa
+    - Ho bisogno di  verrniciare casa
+    - Devo imbiancare
+    - Devo imbiancare una stanza
+    - Necessito di imbiancare delle stanze
+    - Devo stuccare una parete
+    - Devo imbiancare una parete

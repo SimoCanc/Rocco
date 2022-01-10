@@ -1,0 +1,18 @@
+version: "2.0"
+
+rules:
+
+- rule: Say 'I am a bot' anytime the user challenges ENG
+  steps:
+  - intent: bot_challenge_ENG
+  - action: utter_iamabot_ENG
+
+- rule: Say 'I am a bot' anytime the user challenges ITA
+  steps:
+  - intent: bot_challenge_ITA
+  - action: utter_iamabot_ITA
+
+- rule: Ask user to rephrase whether intent is not clear
+  steps:
+  - intetn: nlu_fallback
+  - action: utter_rephrase_
