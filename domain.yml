@@ -41,7 +41,7 @@ slots:
 
 responses:
   utter_rephrase_:
-  - text: "\u1f1e\u1f1e Could you please rephrase? \u1f1e\u1f1e Puoi gentilmente riformulare la richiesta?"
+  - text: "🇬🇧 Could you please rephrase? 🇮🇹 Puoi gentilmente riformulare la richiesta?"
   
   utter_iamabot_ENG:
   - text: "I am a bot, my name is Rocco"
@@ -58,52 +58,58 @@ responses:
   utter_goodbye_ENG:
   - text: "Request sent. Goodbye!!"
   utter_goodbye_ITA:
-  - text: "Richiesta inviata. Arrivederci!!"  
+  - text: "Richiesta inviata. Arrivederci!!" 
   
   utter_confirm_plumber_ENG:
   - text: "Can I proceed to contact a plumber?"
     buttons:
-    - title: Yes
-      payload: /affirm_ENG
-    - title: No
-       payload: /deny_ENG    
+    - title: "Yes"
+      payload: "/affirm_ENG"
+    - title: "No"
+      payload: "/deny_ENG"   
   utter_confirm_plumber_ITA:
   - text: "Procedo a contattare un idraulico?"
     buttons:
-    - title: Si
-    payload: /affirm_ITA
-    - title: No
-    payload: /deny_ITA
+    - title: "Si"
+      payload: "/affirm_ITA"
+    - title: "No"
+      payload: "/deny_ITA"
     
   utter_confirm_electrician_ENG:
   - text: "Can I proceed to contact an electrician?"
     buttons:
-    - title: Yes
-      payload: /affirm_ENG
-    - title: No
-       payload: /deny_ENG    
-  utter_confirm_plumber_ITA:
+    - title: "Yes"
+      payload: "/affirm_ENG"
+    - title: "No"
+      payload: "/deny_ENG "   
+  utter_confirm_electrician_ITA:
   - text: "Procedo a contattare un elettricista?"
     buttons:
-    - title: Si
-    payload: /affirm_ITA
-    - title: No
-    payload: /deny_ITA
+    - title: "Si"
+      payload: "/affirm_ITA"
+    - title: "No"
+      payload: "/deny_ITA"
     
-   utter_confirm_painter_ENG:
+  utter_confirm_painter_ENG:
   - text: "Can I proceed to contact a painter?"
     buttons:
-    - title: Si
-      payload: /affirm_ENG
-    - title: No
-       payload: /deny_ENG    
-  utter_confirm_plumber_ITA:
+    - title: "Yes"
+      payload: "/affirm_ENG"
+    - title: "No"
+      payload: "/deny_ENG "   
+  utter_confirm_painter_ITA:
   - text: "Procedo a contattare un imbianchino?"
     buttons:
-    - title: Si
-    payload: /affirm_ITA
-    - title: No
-    payload: /deny_ITA
+    - title: "Si"
+      payload: "/affirm_ITA"
+    - title: "No"
+      payload: "/deny_ITA"
+
+actions:
+  - action_call_plumber
+  - action_call_electrician
+  - action_call_painter
+
 
 session_config:
   session_expiration_time: 90

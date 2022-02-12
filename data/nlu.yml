@@ -1,8 +1,10 @@
-version: "2.0"
+
+version: "3.0"
 
 nlu:
 - intent: greet_ENG
   examples: |
+    - hi Rocco
     - hey
     - hello
     - hi
@@ -16,15 +18,14 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
-
 - intent: greet_ITA
   examples: |
+    - ciao Rocco
     - ciao
     - salve
     - buongiorno
     - buonasera
     - buon pomeriggio
-
 - intent: affirm_ENG
   examples: |
     - yes
@@ -33,7 +34,6 @@ nlu:
     - of course
     - that sounds good
     - correct
-
 - intent: affirm_ITA
   examples: |
     - si
@@ -42,7 +42,6 @@ nlu:
     - esatto
     - affermativo
     - va bene
-
 - intent: deny_ENG
   examples: |
     - no
@@ -52,7 +51,6 @@ nlu:
     - don't like that
     - no way
     - not really
-
 - intent: deny_ITA
   examples: |
     - no
@@ -60,7 +58,6 @@ nlu:
     - errato
     - negativo
     - non va bene
-
 - intent: bot_challenge_ENG
   examples: |
     - are you a bot?
@@ -71,7 +68,6 @@ nlu:
     - what's your name?
     - Who are you?
     - who're you?
-
 - intent: bot_challenge_ITA
   examples: |
     - sei un bot?
@@ -83,7 +79,6 @@ nlu:
     - con chi stò parlndo?
     - con chi parlo?
     - quale è il tuo nome?
-
 - intent: call_plumber_ENG
   examples: |
     - My house is flooded
@@ -97,7 +92,6 @@ nlu:
     - the bathtub is leaking
     - Call a plumber
     - I need a plumber
-
 - intent: call_plumber_ITA
   examples: |
     - Ho la casa allagata
@@ -112,7 +106,6 @@ nlu:
     - Chiama un idraulico
     - Ho bisogno di un idraulico
     - Necesito di un idraulico
-
 - intent: call_electrician_ENG
   examples: |
     - I'm in the dark
@@ -124,7 +117,6 @@ nlu:
     - There is no current
     - Call an electrician
     - I need an electrician
-
 - intent: call_electrician_ITA
   examples: |
     - Sono al buio
@@ -137,7 +129,6 @@ nlu:
     - Chiama un elettricista
     - Ho bisogno di un elettricista
     - Necesito di un elettricista
-
 - intent: call_painter_ENG
   examples: |
     - I need a house painter
@@ -146,7 +137,6 @@ nlu:
     - I need to paint a room
     - I need to paint some rooms
     - I have to putty a wall
-
 - intent: call_painter_ITA
   examples: |
     - Chiama un imbianchino

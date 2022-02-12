@@ -1,5 +1,6 @@
 # Configuration for Rasa NLU.
 # https://rasa.com/docs/rasa/nlu/components/
+recipe: default.v1
 language: "en"
 
 # Alternative pipeline (custom)
@@ -12,7 +13,7 @@ pipeline:
   max_ngram: 3
 - name: DIETClassifier
   epochs: 50
-  model_confidence: linear_norm
+  model_confidence: softmax
   constrain_similarities: True
 - name: FallbackClassifier
   threshold: 0.7
@@ -24,5 +25,5 @@ policies:
   max_history: 6
   epochs: 50
   constrain_similarities: True
-  model_confidence: linear_norm
+  model_confidence: softmax
 - name: RulePolicy
