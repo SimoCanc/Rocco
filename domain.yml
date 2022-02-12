@@ -41,12 +41,17 @@ slots:
 
 responses:
   utter_rephrase_:
-  - text: "🇬🇧 Could you please rephrase? 🇮🇹 Puoi gentilmente riformulare la richiesta?"
+  - text: "\U0001f1ec\U0001f1e7 Could you please rephrase? \U0001f1ee\U0001f1f9 Puoi gentilmente riformulare la richiesta?"
   
+  utter_ask_again_ENG:
+  - text: "Describe me your problem or the specialist needed, please"
+  utter_ask_again_ITA:
+  - text: "Per favore, descrivimi il problema o lo specialista richiesto"  
+
   utter_iamabot_ENG:
-  - text: "I am a bot, my name is Rocco"
+  - text: "I am a bot \U0001f916, my name is Rocco"
   utter_iamabot_ITA:
-  - text: "Sono un chatbot, mi chiamo Rocco"
+  - text: "Sono un chatbot \U0001f916, mi chiamo Rocco"
     
   utter_greet_ENG:
   - text: "Hi I am Rocco, how can I help you?"
@@ -56,9 +61,9 @@ responses:
   - text: "Ciao sono Rocco, di cosa hai bisogno?"
 
   utter_goodbye_ENG:
-  - text: "Request sent. Goodbye!!"
+  - text: "Request sent. Goodbye \U0001f44b"
   utter_goodbye_ITA:
-  - text: "Richiesta inviata. Arrivederci!!" 
+  - text: "Richiesta inviata. Arrivederci \U0001f44b" 
   
   utter_confirm_plumber_ENG:
   - text: "Can I proceed to contact a plumber?"
@@ -106,6 +111,7 @@ responses:
       payload: "/deny_ITA"
 
 actions:
+  - action_reset_slots
   - action_call_plumber
   - action_call_electrician
   - action_call_painter

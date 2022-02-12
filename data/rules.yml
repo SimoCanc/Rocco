@@ -11,7 +11,7 @@ rules:
   steps:
   - intent: bot_challenge_ITA
   - action: utter_iamabot_ITA
-
+  
 - rule: Ask user to rephrase whether intent is not clear
   steps:
   - intent: nlu_fallback

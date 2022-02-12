@@ -102,7 +102,7 @@ nlu:
     - Ho acqua da pertutto
     - Lo sciacquone non scarica
     - Il lavandino non scarica
-    - la vasca da bagno perde
+    - La vasca da bagno perde
     - Chiama un idraulico
     - Ho bisogno di un idraulico
     - Necesito di un idraulico
@@ -115,6 +115,7 @@ nlu:
     - a short circuit has occurred
     - A light bulb went out
     - There is no current
+    - A neon light burned out
     - Call an electrician
     - I need an electrician
 - intent: call_electrician_ITA
@@ -126,6 +127,7 @@ nlu:
     - si è verificato un cortocircuito
     - Si è fulminata una lampadina
     - Non c'è corrente 
+    - Un neon si è bruciato
     - Chiama un elettricista
     - Ho bisogno di un elettricista
     - Necesito di un elettricista

@@ -1,7 +1,7 @@
 version: "3.0"
 
 stories:
-#TODO: fare versioni con richieste Bad, e con chitchat
+#TODO: implementare chitchat
 - story: call plumber ENG
   steps:
   - intent: greet_ENG
@@ -30,11 +30,39 @@ stories:
   - intent: affirm_ENG
   - action: utter_goodbye_ENG
 
+- story: BAD call plumber short ENG
+  steps:
+  - intent: call_plumber_ENG
+  - action: utter_confirm_plumber_ENG
+  - action: action_call_plumber
+  - intent: deny_ENG
+  - action: action_reset_slots
+  - action: utter_ask_again_ENG 
+  - intent: call_electrician_ENG
+  - action: action_call_electrician
+  - action: utter_confirm_electrician_ENG
+  - intent: affirm_ENG
+  - action: utter_goodbye_ENG
+
 - story: call plumber short ITA
   steps:
   - intent: call_plumber_ITA
   - action: utter_confirm_plumber_ITA
   - action: action_call_plumber 
+  - intent: affirm_ITA
+  - action: utter_goodbye_ITA
+
+- story: BAD call plumber short ITA
+  steps:
+  - intent: call_plumber_ITA
+  - action: utter_confirm_plumber_ITA
+  - action: action_call_plumber
+  - intent: deny_ITA
+  - action: action_reset_slots
+  - action: utter_ask_again_ITA 
+  - intent: call_electrician_ITA
+  - action: action_call_electrician
+  - action: utter_confirm_electrician_ITA
   - intent: affirm_ITA
   - action: utter_goodbye_ITA
 
@@ -66,11 +94,39 @@ stories:
   - intent: affirm_ENG
   - action: utter_goodbye_ENG
 
+- story: BAD call electrician short ENG
+  steps:
+  - intent: call_electrician_ENG
+  - action: utter_confirm_electrician_ENG
+  - action: action_call_electrician
+  - intent: deny_ENG
+  - action: action_reset_slots
+  - action: utter_ask_again_ENG 
+  - intent: call_painter_ENG
+  - action: action_call_painter
+  - action: utter_confirm_painter_ENG
+  - intent: affirm_ENG
+  - action: utter_goodbye_ENG
+
 - story: call electrician short ITA
   steps:
   - intent: call_electrician_ITA
   - action: utter_confirm_electrician_ITA
   - action: action_call_electrician
+  - intent: affirm_ITA
+  - action: utter_goodbye_ITA
+
+- story: BAD call electrician short ITA
+  steps:
+  - intent: call_electrician_ITA
+  - action: utter_confirm_electrician_ITA
+  - action: action_call_electrician
+  - intent: deny_ITA
+  - action: action_reset_slots
+  - action: utter_ask_again_ITA 
+  - intent: call_painter_ITA
+  - action: action_call_painter
+  - action: utter_confirm_painter_ITA
   - intent: affirm_ITA
   - action: utter_goodbye_ITA
 
@@ -101,6 +157,20 @@ stories:
   - action: action_call_painter
   - intent: affirm_ENG
   - action: utter_goodbye_ENG
+
+- story: BAD call painter short ENG
+  steps:
+  - intent: call_painter_ENG
+  - action: utter_confirm_painter_ENG
+  - action: action_call_painter
+  - intent: deny_ENG
+  - action: action_reset_slots
+  - action: utter_ask_again_ENG #TODO:Ancora da implementare
+  - intent: call_plumber_ENG
+  - action: action_call_plumber
+  - action: utter_confirm_plumber_ENG
+  - intent: affirm_ENG
+  - action: utter_goodbye_ENG
    
 - story: call painter short ITA
   steps:
@@ -109,3 +179,16 @@ stories:
   - action: action_call_painter
   - intent: affirm_ITA
   - action: utter_goodbye_ITA
+
+- story: BAD call painter short ITA
+  steps:
+  - intent: call_painter_ITA
+  - action: utter_confirm_painter_ITA
+  - action: action_call_painter
+  - intent: deny_ITA
+  - action: action_reset_slots
+  - action: utter_ask_again_ITA #TODO:Ancora da implementare
+  - intent: call_plumber_ITA
+  - action: action_call_plumber
+  - action: utter_confirm_plumber_ITA
+  - intent: affirm_ITA
